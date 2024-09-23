@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "0C0d3",
+  "version": "1.0",
+  "description": "ad blocker 0c0d3.", 
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "icons": {
+    "48": "icons/icon.png"
+  }
+}
