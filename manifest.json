@@ -1,18 +1,24 @@
 {
   "manifest_version": 2,
-  "name": "0C0d3",
-  "version": "1.0",
-  "description": "ad blocker 0c0d3.", 
+  "name": "0c0d3",
+  "version": "1.2.0",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
     "storage",
-    "<all_urls>"
+    "activeTab",
+    "scripting"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": ["background.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
   "icons": {
     "48": "icons/icon.png"
   }
