@@ -1,20 +1,22 @@
 {
   "manifest_version": 2,
   "name": "0c0d3",
-  "version": "1.2.0",
+  "version": "1.2.1",
+  "description": "No weird or hidden scripts, no complex structures, just simple. An ad blocker made with zero code.",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "*://*/*"
   ],
   "background": {
     "scripts": ["background.js"]
   },
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/*"],
+      "matches": ["<all_urls>"],
       "js": ["content.js"],
       "run_at": "document_start"
     }
