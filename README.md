@@ -1,5 +1,5 @@
 # -0C0d3
-ad blocker 0c0d3. FIREFOX
+ad blocker 0c0d3 for Firefox
 # No weird or hidden scripts, no complex structures, just simple.
 # An ad blocker made with zero code.
 Use with DNS Blocking like NextDNS or similar
