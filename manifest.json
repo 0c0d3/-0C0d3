@@ -1,27 +1,30 @@
 {
-  "manifest_version": 2,
-  "name": "0c0d3",
-  "version": "1.2.1",
-  "description": "No weird or hidden scripts, no complex structures, just simple. An ad blocker made with zero code.",
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "storage",
-    "activeTab",
-    "scripting",
-    "*://*/*"
-  ],
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_start"
+    "manifest_version": 2,
+    "name": "0c0d3",
+    "version": "1.2.3",
+    "description": "No weird or hidden scripts, no complex structures, just simple. An ad blocker made with zero code.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "scripting",
+        "*://*/*",
+        "cookies"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png"
     }
-  ],
-  "icons": {
-    "48": "icons/icon.png"
-  }
 }
